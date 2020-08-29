@@ -15,11 +15,15 @@
             <!--<span class="nav-color">Заголовок страницы</span>-->
             <nav class="navbar navbar-expand-md navbar-dark bg-dark">
                 <!-- меню сайта -->
-                <a class="navbar-brand" href="#">WebLabs_Botnikov_90311</a>
+                @*<a class="navbar-brand" href="#">WebLabs_Botnikov_90311</a>
+        <div class="navbar-nav">
+            <a class="nav-item nav-link active" asp-controller="Home" aspaction="Index">Lab 2</a>
+            <a class="nav-item nav-link" asp-controller="Product" aspaction="Index">Каталог</a>
+            <a class="nav-item nav-link" asp-area="Admin" asppage="/Index">Администрирование</a>
+        </div>*@
+                <a class="navbar-brand" asp-action="Index" aspcontroller="Home">WebLabs_Botnikov_90311</a>
                 <div class="navbar-nav">
-                    <a class="nav-item nav-link active" asp-controller="Home" aspaction="Index">Lab 2</a>
-                    <a class="nav-item nav-link" asp-controller="Product" aspaction="Index">Каталог</a>
-                    <a class="nav-item nav-link" asp-area="Admin" asppage="/Index">Администрирование</a>
+                    @await Component.InvokeAsync("Menu")
                 </div>
                 <!-- меню сайта - конец -->
                 <!-- Информация пользователя -->
